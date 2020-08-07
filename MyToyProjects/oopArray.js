@@ -21,7 +21,6 @@ class MyArray {
     }
     push(input) {
         this.value[length] = input;
-        console.log(this.value.length);
         return input;
     }
     pop() {
@@ -29,9 +28,23 @@ class MyArray {
         this.value.splice(length-1, 1);
         return deletedValue;
     }
+    unshift(input) {
+        this.value.splice(0,0,input);
+        return input;
+    }
+    shift() {
+        let deletedValue = this.value[0];
+        this.value.splice(0,1);
+        return deletedValue;
+    }
 }
 
 let arr = new Array(1,2,3);
 arr.push(4);
+console.log(arr);
 arr.pop();
+console.log(arr);
+arr.unshift(0);
+console.log(arr);
+arr.shift();
 console.log(arr);
