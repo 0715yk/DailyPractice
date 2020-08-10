@@ -3,7 +3,7 @@
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 99; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #111; /* Black*/
@@ -58,11 +58,12 @@
     transition: margin-left .5s;
     height:100%;
     width:100%;
+    position:relative;
   }
   #main-left {
     width:35%;
     height:100%;
-    background-color:NavajoWhite;
+    background-color: NavajoWhite;
     display: inline-block;
     margin:0px;
     padding:0px;
@@ -75,16 +76,15 @@
     height:100%;
     z-index: -1;
     display: inline-block;
+    background-color:white;
   }
   #sub {
-    margin-left:10%;
-    margin-top:30%;
-    height: 45%;
-    width: 74%;
-    border:5px solid NavajoWhite;
+    width:70%;
+    height: 40%;
+    position: relative;
+    top: 35%;
+    left: 13%;
+    padding:0px;
+    border:10px solid BurlyWood;
+    background-color: Cornsilk;
   } 
-  #specList {
-      height: 50%;
-      width: 90%;
-      margin-bottom: 150%;
-  }

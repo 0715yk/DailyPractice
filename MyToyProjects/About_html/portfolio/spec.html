@@ -3,10 +3,31 @@
     <head>
         <meta charset="UTF-8"/>
         <title>용기로그</title>
+        <script src="https://kit.fontawesome.com/8290613ec0.js" crossorigin="anonymous"></script>
         <link href="portfolio.css" rel="stylesheet" type="text/css"/>
         <script src="portfolio.js"></script>
+        <style>
+            html {
+                height:100%;
+            }
+            #icons a:hover {
+                color:orange; 
+
+            }
+        </style>
+        <base target="_blank">
     </head>
-    <body>
-        <h1>hello,</h1>
+    <body style="width:100%; height:100%; padding:0px; margin: 0;">
+        <div id="title" style="text-align: center;">
+            <h1 style="position: relative;"><a href="index.html"><button style="position: absolute; left:4px; height:35px; width:70px;"><strong>Back</strong></button></a>Portfolio Links</h1>
+        </div>
+        <div id="main" style="position: relative; height:100%; width:100%;">
+            <div id="icons" style="position: absolute; width:100%; margin-top:200px !important; text-align: center;">
+                <a href="https://soundcloud.com/hong-yongki-378681933"><i style="position:absolute; left: 300px; font-size:150px !important; " class="fab fa-soundcloud"></i></a>
+                <a href="https://github.com/0715yk"><i style="position:absolute; left: 550px; font-size:150px !important;" class="fab fa-github"></i></a>
+                <a href="https://blog.naver.com/calmmne"><i style="position:absolute; left: 750px; font-size:150px !important;" class="fab fa-microblog"></i></a>
+            </div>
+        </div>
+
     </body>
 </html>
