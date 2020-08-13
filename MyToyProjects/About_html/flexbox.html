@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>FLEXBOX</title>
+        <style>
+            .container {
+                display:flex;
+                background-color: coral;
+                width: 400px;
+                height: 500px;
+                /* flex-direction: row; */
+                flex-flow: row wrap;
+            }
+            #item1 {
+                flex-shrink: 1;
+                background-color: green;
+                height: 100px;
+                width: 100px;
+                border:1px solid;
+                order:1;
+                box-sizing: border-box;
+            }
+            #item2 {
+                flex-shrink: 2;
+                /* flex-grow: 1; */
+                box-sizing: border-box;
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+                order:2;
+                border:1px solid;
+            }
+            #item3 {
+                flex-shrink: 3;
+                /* flex-grow: 1; */
+                box-sizing: border-box;
+                background-color: darkblue;
+                height: 100px;
+                width: 100px;
+                order:3;
+                border:1px solid;
+            }
+            #item4 {
+                flex-shrink: 4;
+                box-sizing: border-box;
+                background-color: white;
+                height: 100px;
+                width: 100px;
+                order:4;
+                border:1px solid;
+            }
+            #item5 {
+                flex-shrink: 5;
+                box-sizing: border-box;
+                background-color: grey;
+                height: 100px;
+                width: 100px;
+                order:5;
+                border:1px solid;
+            }
+            #item6 {
+                box-sizing: border-box;
+                background-color: black;
+                height: 100px;
+                width: 100px;
+                order:6;
+                border:1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="item1">
+
+            </div>
+            <div id="item2">
+
+            </div>
+            <div id="item3">
+
+            </div>
+            <div id="item4">
+
+            </div>
+            <div id="item5">
+
+            </div>
+            <div id="item6">
+
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="items">
+
+            </div>
+            <div class="items">
+
+            </div>
+            <div class="items">
+
+            </div>
+        </div> -->
+    </body>
+</html>

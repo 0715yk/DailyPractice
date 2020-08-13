@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <title>Span vs Div</title>
+        <style>
+            div {
+                margin:15px;
+                background-color:aqua;
+                border:1px solid;
+                
+            }
+            div:hover {
+                transform: translate(10px,-10px);
+            }
+            span {
+                background-color: brown;
+                border:1px solid;
+            }
+            .ib {
+                display: inline-block;
+                height:100px;
+                width:500px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div>안녕하세요div</div>
+        <div>안녕하세요div</div>
+        <div>안녕하세요div</div>
+        <span>안녕하세요span</span>
+        <span>안녕하세요span</span>
+        <div>
+            <span>hi</span>
+            <span>hi</span>
+            <div>hello</div>
+        </div>
+        <!-- div는 자동으로 padding, margin이 포함되는 박스 영역으로 형성되지만, span은 inline으로 안에 콘텐츠 만큼의 크기를 가지고 생성된다 -->
+        <!-- span은 inline요소, div는 block요소이다.-->
+        <!-- div는 자동 줄바꿈/ span은 줄바꿈 안함. -->
+        <div class="ib">rwrwwr</div>
+        <div class="ib">rwrwwr</div>
+    </body>
+</html>

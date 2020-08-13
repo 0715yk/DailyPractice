@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Twittler</title>
+        <script src="https://kit.fontawesome.com/8290613ec0.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+                padding: 0;
+                margin:0;
+                height:100%;
+                width: 100%;
+            }
+            section {
+                position:fixed;
+                height: 95%;   
+                width:28%;
+                margin: 5px;
+                border: 10px solid #003366;
+                background-color: white;
+            }
+            aside {
+                border:10px solid #003366;
+                position: fixed;
+                left:32%;
+                width: 65%;
+                height:95%;
+                margin: 5px;
+                margin-left:0px !important;
+                background-color: white;
+            }  
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+            }
+            li {
+                font-size: 35px;
+                font-weight: bold;
+                text-align: center;
+                background-color: white;
+            }
+            li a {
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            /* Change the link color on hover */
+            li a:hover {
+                background-color: #003366;
+                color: white;
+            }
+
+            .contents {
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                display: block;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div id="imagePart" style="width:50%; height:27%; border: 1px solid; position: absolute; left:25%; top:10%;">
+                <img style="width:100%; height:100%;" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+            </div>
+            <div id="nicknamePart" style="font-size: 25px; width:50%; text-align:center; font-weight:200; position:absolute; left:25%; top:39%; text-align: center;">
+                @yongkini
+            </div>
+            <div id="informPart" style="position:absolute; top:50%; width: 100%;">
+                <ul>
+                    <li><a href="default.asp"><i style="font-size: 35px;" class="fas fa-ellipsis-v"></i> List</a></li>
+                    <li><a href="news.asp"><i style="font-size: 35px;" class="fas fa-bookmark"></i> Bookmark</a></li>
+                    <li><a href="contact.asp"><i style="font-size: 35px;" class="fas fa-bell"></i> Notification</a></li>
+                    <li><a href="about.asp"><i style="font-size: 35px;" class="fas fa-cog"></i> Settings</a></li>
+                  </ul>
+            </div>
+        </section>
+        <aside>
+            <div style="position: absolute; left:7%; width:83%; height:35%; ">            
+                <form style="position: absolute; width:100%; height:100%;" action="twittler.html" autocomplete="on" method="POST">
+                    <img style="position: absolute; top:10%;" width="100px" height="100px" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                    <!--1) 글쓰다가 넘어가는 부분 아래로 내려가게 설정해야함-->
+                    <input style="top: 10%; height:150px; width:79%; position: absolute; left:20%;" type="text"/>
+                    <div id="button_tweet" style="position: absolute; right:0;bottom: 0; ">
+                        <button><i style="font-size:25px;" class="fas fa-images"></i></button>
+                        <button style="font-size:25px;">Tweet</button>
+                    </div>
+                </form>
+            </div>
+            <div id="theOtherTweet" style="border: 5px solid #003366; position: absolute; width:95%; height: 58%; top: 40%; left: 2%; overflow: scroll;">
+                <ul style="list-style: none; position: absolute; left:2%; width: 97%; margin-top:15px; height:100%">
+                    <li>           
+                        <img width="11%" height="34%" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                        <input style="height:115px; width:86%;" type="text"/>
+                        <div id="button_tweet">
+                            <button><i style="font-size: 25px;" class="fas fa-comments"></i></button>
+                            <button><i style="font-size: 25px;" class="fas fa-bookmark"></i></button>
+                        </div>             
+                    </li>  
+                    <hr>  
+                    <li>           
+                        <img width="11%" height="34%" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                        <input style="height:115px; width:86%;" type="text"/>
+                        <div id="button_tweet">
+                            <button><i style="font-size: 25px;" class="fas fa-comments"></i></button>
+                            <button><i style="font-size: 25px;" class="fas fa-bookmark"></i></button>
+                        </div>             
+                    </li>      
+                    <hr>
+                    <li>           
+                        <img width="11%" height="34%" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                        <input style="height:115px; width:86%;" type="text"/>
+                        <div id="button_tweet">
+                            <button><i style="font-size: 25px;" class="fas fa-comments"></i></button>
+                            <button><i style="font-size: 25px;" class="fas fa-bookmark"></i></button>
+                        </div>             
+                    </li>       
+                    <hr>      
+                    <li>           
+                        <img width="11%" height="34%" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                        <input style="height:115px; width:86%;" type="text"/>
+                        <div id="button_tweet">
+                            <button><i style="font-size: 25px;" class="fas fa-comments"></i></button>
+                            <button><i style="font-size: 25px;" class="fas fa-bookmark"></i></button>
+                        </div>             
+                    </li>  
+                    <hr>
+                    <li>           
+                        <img width="11%" height="34%" src="https://t1.daumcdn.net/cfile/tistory/2513B53E55DB206927" alt="user_image"/>
+                        <input style="height:115px; width:86%;" type="text"/>
+                        <div id="button_tweet">
+                            <button><i style="font-size: 25px;" class="fas fa-comments"></i></button>
+                            <button><i style="font-size: 25px;" class="fas fa-bookmark"></i></button>
+                        </div>             
+                    </li>    
+                    <hr>            
+                </ul>
+            </div>
+        </aside>
+    </body>
+</html>

@@ -23,16 +23,45 @@
                 margin-left: 50px;
             }
         </style>
+        <script>
+            function button1_click() {                
+                let inputs = document.querySelectorAll('input');
+                if (inputs[0].value.length === 0) {
+                    alert('아이디를 입력해주세요!');
+                } if (inputs[2].value.length === 0) {
+                    alert('내용을 입력해주세요!');
+                }
+                let li = document.createElement('li');
+                let mainDiv = document.createElement('div');
+                mainDiv.classList.add('main');
+                let div = document.createElement('div');
+                let strong = document.createElement('strong');
+                div.append(strong);
+                div.textContent = inputs[0].value;
+                let newDiv = div;
+                let divs = document.createElement('div');
+                divs.textContent = inputs[2].value;
+                let contentsDiv = divs;
+                newDiv.classList.add('contents');
+                contentsDiv.classList.add('contents');
+                mainDiv.append(newDiv, contentsDiv);
+                li.appendChild(mainDiv);
+                let lists = document.querySelector('ul#commentList');
+                lists.appendChild(li);
+            }
+        </script>
     </head>
     <body>
         <div id="inputComment">
             <div style="margin-top:5px;"><strong>댓글</strong> 4</div>
-            <div style="margin-top:8px; width:100%">
-                <input style="width:85%; height:51px; margin:0px; padding:0px;" type="text" name="contents" placeholder="댓글을 입력해주세요.."/>
-                <button style="padding-bottom: 2px; padding-top: 2px; height:54.5px; width: 10%; padding:0px;">등록</button>
+            <div id='formDiv' style="margin-top:8px; width:100%">
+                ID &nbsp;&nbsp;: &nbsp;&nbsp;<input id='id' type='text' name='id'/><br>
+                PWD : <input id='pwd' type='password' name='pwd'/>
+                <input id='comment' style="width:85%; height:51px; margin:0px; padding:0px;" type="text" name="contents" placeholder="댓글을 입력해주세요.."/>
+                <button id='button1' onclick='button1_click();' style="padding-bottom: 2px; padding-top: 2px; height:54.5px; width: 10%; padding:0px;">등록</button>
             </div>  
         </div>
-        <ul style="list-style:none;">
+        <ul id="commentList" style="list-style:none;">
             <li>
                 <div class="main">
                     <div class="contents"><strong>hyk****</strong></div>
