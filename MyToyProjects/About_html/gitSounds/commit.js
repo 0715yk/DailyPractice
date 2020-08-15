@@ -18,7 +18,7 @@ function getFormatDate(date){
 
 commitBtn.onclick = function() {
     const obj = {};
-    var lyricsInput = document.querySelector('#item1');
+    var lyricsInput = document.querySelector('#flexbox2 #item1');
     obj.verse = lyricsInput.value;
     var date = new Date();
     var now = getFormatDate(date);
@@ -28,6 +28,7 @@ commitBtn.onclick = function() {
     while (lyricList.firstChild) {
         lyricList.removeChild(lyricList.firstChild);
     }
+    lyricsInput.value='';
     verseAppender(lyrics);
 }
 
