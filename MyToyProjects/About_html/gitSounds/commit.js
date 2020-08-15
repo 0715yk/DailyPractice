@@ -1,8 +1,7 @@
 const lyrics = [];
-
 const commitBtn = document.querySelector('#flexbox2 #item2');
 
-
+//날짜 형식 변환 함수
 function getFormatDate(date){
     var year = date.getFullYear();         
     var month = (1 + date.getMonth());       
@@ -16,6 +15,7 @@ function getFormatDate(date){
     return  `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 }
 
+// commit 버튼으로 데일리 커밋용 버튼
 commitBtn.onclick = function() {
     const obj = {};
     var lyricsInput = document.querySelector('#flexbox2 #item1');
@@ -32,6 +32,7 @@ commitBtn.onclick = function() {
     verseAppender(lyrics);
 }
 
+// lyrics 배열에 있는 모든 verse객체의 자료를 html문서에 출력하도록 하는 함수
 function verseAppender(lyric) {
     var div = document.createDocumentFragment();
     for (let el of lyric) {
@@ -43,3 +44,5 @@ function verseAppender(lyric) {
     lyricList.appendChild(div);
 }
 verseAppender(lyrics);
+
+//

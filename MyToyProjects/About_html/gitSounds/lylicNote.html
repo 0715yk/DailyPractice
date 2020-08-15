@@ -4,6 +4,9 @@
         <meta charset="UTF-8"/>
         <title>Lyrics Git</title>
         <style>
+            #lyricList {
+                list-style: none;
+            }
             #flexbox1 {
                 display: flex;
                 flex-flow: row;
@@ -18,17 +21,18 @@
             #flexbox1 #item2 {
                 order:2;
                 flex:5;
-                
                 align-self: stretch;
                 height:400px;
                 overflow: scroll;
             }
             #flexbox2 {
+                align-content: center;
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row;
+                width:60%;
+                margin:0 auto;
             }
             #item1 {
-                width:30%; 
                 height:50px; 
                 order:1;
                 flex: 0.9; 
@@ -36,11 +40,18 @@
             #item2 {
                 order:2;
                 flex: 0.1; 
+                padding:0px;
+                border:1px solid;
+                margin:0 10px;
+                border-radius: 5px;
+                box-shadow: 5px grey ;
             }
         </style>
     </head>
     <body>
         <h1>Track1 : Fly Away</h1>
+        <hr>
+        <br>
         <div id='flexbox1'>
             <iframe id='item1' width="560" height="315" src="https://www.youtube.com/embed/gjRXjZsvSg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div id="item2">
@@ -48,7 +59,9 @@
                 </ol>
             </div>
         </div>
-        <h2>Lyric Note - 1day 1commit</h2>
+        <br>
+        <hr>
+        <h2 style='text-align: center;'>Lyric Note - 1 day 1 commit</h2>
         <div id='flexbox2'>
             <input id='item1' type='text'/>
             <button id='item2'>commit</button>
