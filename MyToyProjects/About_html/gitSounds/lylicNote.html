@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Lyrics Git</title>
+        <style>
+            #flexbox1 {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+            #flexbox1 #item1 {
+                order:1;
+                flex:5;
+                align-self: stretch;
+                height:400px;
+            }
+            #flexbox1 #item2 {
+                order:2;
+                flex:5;
+                
+                align-self: stretch;
+                height:400px;
+                overflow: scroll;
+            }
+            #flexbox2 {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            #item1 {
+                order:1;
+                flex: 0.9; 
+            }
+            #item2 {
+                order:2;
+                flex: 0.1; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Track1 : Fly Away</h1>
+        <div id='flexbox1'>
+            <iframe id='item1' width="560" height="315" src="https://www.youtube.com/embed/gjRXjZsvSg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="item2">
+                <ol id="lyricList">
+                </ol>
+            </div>
+        </div>
+        <h2>Lyric Note - 1day 1commit</h2>
+        <div id='flexbox2'>
+            <input id='item1' type='text' style="width:30%; height:50px; "/>
+            <button id='item2'>commit</button>
+        </div>
+    </body>
+    <script src="commit.js"></script>
+</html>
