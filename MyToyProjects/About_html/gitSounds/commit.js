@@ -45,4 +45,7 @@ function verseAppender(lyric) {
 }
 verseAppender(lyrics);
 
-//
+// 마음에 들지 않는 벌스를 수정할 수 있는 로직 짜보기
+// prompt를 이용하면 좋을듯 => prompt로 입력받고, 그 객체의 obj.verse를 입력받은걸로 바꾸기
+// delete 버튼도 만들어서 누르면 삭제하시겠습니까? 하고 삭제하기 
+
