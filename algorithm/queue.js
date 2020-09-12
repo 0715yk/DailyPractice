@@ -28,11 +28,11 @@ class CircularQueue {
     }
 
     size() {
-        return this.front_pointer - this.rear_pointer + 1;
+        return this.front_pointer - this.rear_pointer;
     }
 
     isEmpty() {
-        return this.front_pointer - this.rear_pointer + 1 === 0;
+        return this.front_pointer - this.rear_pointer === 0;
     }
 
     peek() {
