@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Comment Page</title>
-        <script src="https://kit.fontawesome.com/8290613ec0.js" crossorigin="anonymous"></script>
-        <style>
-            div.main {
-                width:90%;
-                padding:6px;
-            }
-            div.contents {
-                margin:5px;
-            }
-            div.upDownBtn {
-                text-align: right;
-                margin-bottom: 10px;
 
+<head>
+    <meta charset="UTF-8" />
+    <title>Comment Page</title>
+    <script src="https://kit.fontawesome.com/8290613ec0.js" crossorigin="anonymous"></script>
+    <style>
+        div.main {
+            width: 90%;
+            padding: 6px;
+        }
+
+        div.contents {
+            margin: 5px;
+        }
+
+        div.upDownBtn {
+            text-align: right;
+            margin-bottom: 10px;
+
+        }
+
+        div#inputComment {
+            width: 90%;
+            margin-top: 25px;
+            margin-left: 50px;
+        }
+    </style>
+    <script>
+        function button1_click() {
+            let inputs = document.querySelectorAll('input');
+            if (inputs[0].value.length === 0) {
+                alert('아이디를 입력해주세요!');
+                return;
             }
-            div#inputComment {
-                width:90%;
-                margin-top: 25px;
-                margin-left: 50px;
+            if (inputs[2].value.length === 0) {
+                alert('내용을 입력해주세요!');
+                return;
             }
-        </style>
-        <script>
-            function button1_click() {                
-                let inputs = document.querySelectorAll('input');
-                if (inputs[0].value.length === 0) {
-                    alert('아이디를 입력해주세요!');
-                } if (inputs[2].value.length === 0) {
-                    alert('내용을 입력해주세요!');
-                }
-                let li = document.createElement('li');
-                let mainDiv = document.createElement('div');
-                mainDiv.classList.add('main');
-                let div = document.createElement('div');
-                let strong = document.createElement('strong');
-                div.append(strong);
-                div.textContent = inputs[0].value;
-                let newDiv = div;
-                let divs = document.createElement('div');
-                divs.textContent = inputs[2].value;
-                let contentsDiv = divs;
-                newDiv.classList.add('contents');
-                contentsDiv.classList.add('contents');
-                mainDiv.append(newDiv, contentsDiv);
-                li.appendChild(mainDiv);
-                let lists = document.querySelector('ul#commentList');
-                lists.appendChild(li);
-            }
-        </script>
-    </head>
-    <body>
-        <div id="inputComment">
-            <div style="margin-top:5px;"><strong>댓글</strong> 4</div>
-            <div id='formDiv' style="margin-top:8px; width:100%">
-                ID &nbsp;&nbsp;: &nbsp;&nbsp;<input id='id' type='text' name='id'/><br>
-                PWD : <input id='pwd' type='password' name='pwd'/>
-                <input id='comment' style="width:85%; height:51px; margin:0px; padding:0px;" type="text" name="contents" placeholder="댓글을 입력해주세요.."/>
-                <button id='button1' onclick='button1_click();' style="padding-bottom: 2px; padding-top: 2px; height:54.5px; width: 10%; padding:0px;">등록</button>
-            </div>  
+            let li = document.createElement('li');
+            let mainDiv = document.createElement('div');
+            mainDiv.classList.add('main');
+            let div = document.createElement('div');
+            let strong = document.createElement('strong');
+            div.append(strong);
+            div.textContent = inputs[0].value;
+            let newDiv = div;
+            let divs = document.createElement('div');
+            divs.textContent = inputs[2].value;
+            let contentsDiv = divs;
+            newDiv.classList.add('contents');
+            contentsDiv.classList.add('contents');
+            mainDiv.append(newDiv, contentsDiv);
+            li.appendChild(mainDiv);
+            let lists = document.querySelector('ul#commentList');
+            lists.appendChild(li);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="inputComment">
+        <div style="margin-top:5px;"><strong>댓글</strong> 4</div>
+        <div id='formDiv' style="margin-top:8px; width:100%">
+            ID &nbsp;&nbsp;: &nbsp;&nbsp;<input id='id' type='text' name='id' /><br>
+            PWD : <input id='pwd' type='password' name='pwd' />
+            <input id='comment' style="width:85%; height:51px; margin:0px; padding:0px;" type="text" name="contents"
+                placeholder="댓글을 입력해주세요.." />
+            <button id='button1' onclick='button1_click();'
+                style="padding-bottom: 2px; padding-top: 2px; height:54.5px; width: 10%; padding:0px;">등록</button>
         </div>
-        <ul id="commentList" style="list-style:none;">
-            <li>
-                <div class="main">
-                    <div class="contents"><strong>hyk****</strong></div>
-                    <div class="contents">코로나가 언제 끝날지는 모르지만 모두 같이 힘내서 극복합시다!!</div>
-                    <div class="contents">2020-08-10 11:13:04</div>
-                    <div class="upDownBtn">
-                        <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;6</button></span>
-                        <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;1</button></span>
-                    </div>
-                    <hr>
+    </div>
+    <ul id="commentList" style="list-style:none;">
+        <li>
+            <div class="main">
+                <div class="contents"><strong>hyk****</strong></div>
+                <div class="contents">코로나가 언제 끝날지는 모르지만 모두 같이 힘내서 극복합시다!!</div>
+                <div class="contents">2020-08-10 11:13:04</div>
+                <div class="upDownBtn">
+                    <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;6</button></span>
+                    <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;1</button></span>
                 </div>
-                
-            </li>
-            <li>
-                <div class="main">
-                    <div class="contents"><strong>doub****</strong></div>
-                    <div class="contents">코로나에 장마까지.. 지구가 힘들어하네요;;</div>
-                    <div class="contents">2020-08-10 13:13:25</div>
-                    <div class="upDownBtn">
-                        <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;2</button></span>
-                        <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;0</button></span>
-                    </div>
-                    <hr>
+                <hr>
+            </div>
+
+        </li>
+        <li>
+            <div class="main">
+                <div class="contents"><strong>doub****</strong></div>
+                <div class="contents">코로나에 장마까지.. 지구가 힘들어하네요;;</div>
+                <div class="contents">2020-08-10 13:13:25</div>
+                <div class="upDownBtn">
+                    <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;2</button></span>
+                    <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;0</button></span>
                 </div>
-            </li>
-            <li>
-                <div class="main">
-                    <div class="contents"><strong>calm****</strong></div>
-                    <div class="contents">다들 파이팅입니다!</div>
-                    <div class="contents">2020-08-10 14:15:55</div>
-                    <div class="upDownBtn">
-                        <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;15</button></span>
-                        <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;3</button></span>
-                    </div>
-                    <hr>
+                <hr>
+            </div>
+        </li>
+        <li>
+            <div class="main">
+                <div class="contents"><strong>calm****</strong></div>
+                <div class="contents">다들 파이팅입니다!</div>
+                <div class="contents">2020-08-10 14:15:55</div>
+                <div class="upDownBtn">
+                    <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;15</button></span>
+                    <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;3</button></span>
                 </div>
-            </li>
-            <li>
-                <div class="main">
-                    <div class="contents"><strong>xxr****</strong></div>
-                    <div class="contents">코로나 때문에 해외여행도 다 취소했지만.. 다들 노력합시다!</div>
-                    <div class="contents">2020-08-10 16:44:33</div>
-                    <div class="upDownBtn">
-                        <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;4</button></span>
-                        <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;2</button></span>
-                    </div>
-                    <hr>
+                <hr>
+            </div>
+        </li>
+        <li>
+            <div class="main">
+                <div class="contents"><strong>xxr****</strong></div>
+                <div class="contents">코로나 때문에 해외여행도 다 취소했지만.. 다들 노력합시다!</div>
+                <div class="contents">2020-08-10 16:44:33</div>
+                <div class="upDownBtn">
+                    <span><button><i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;4</button></span>
+                    <span><button><i class="fas fa-thumbs-down"></i>&nbsp;&nbsp;2</button></span>
                 </div>
-            </li>
-        </ul>
-    </body>
+                <hr>
+            </div>
+        </li>
+    </ul>
+</body>
+
 </html>

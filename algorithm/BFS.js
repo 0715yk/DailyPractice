@@ -37,7 +37,7 @@ User.prototype.friendsRecommendation = function () {
         // [0,2,3,4] => 만약 나랑 일치하면 패스, 
 
         // 나를 기준으로 찾기 시작
-        let queue = [];
+
         // 재귀함수를 만들 것
         // 맨위 root Node = me => 부터 시작해서, 차례로 큐에 넣음
         // 그러면 먼저, 큐에는 내 객체가 들어갈 것 [나]
@@ -45,25 +45,48 @@ User.prototype.friendsRecommendation = function () {
         // [친구1, 친구2] 이 상태에서 큐에있는 첫번째 친구1을 pop하고, 그 친구의 친구들을 push하기
         // 같은 방법으로 맨 위에있는 친구2를 팝하고, 그 친구의 친구들을 push하기 
         // 원하는 레벨까지 갔으므로 재귀호출 끝내고
-        // 현재 큐에 있는 친구의 친구 목록 리턴하기 
-        function recursion(node) {
-            try {
-                for (let el of node.friends) {
-                    // 친구1의 친구들로 for문 ---2
-                    // 친구2의 친구들로 for문 ---3
-                    if (queue.indexOf(el) === -1) queue.push(el);
-                    // 친구1의 친구들을  큐에 푸시, 현재 큐 : [친구2, 친구1-1, 친구1-2]
-                    // 친구2의 친구들을 큐에 푸시, 현재 큐 : [친구1-1, 친구1-2, 친구2-1, 친구2-2]
-                }
-                let pop = queue.shift();
-                console.log(pop.name);
-                // 현재 큐에 [친구1, 친구2] -- 1
-                return recursion(pop); // 친구1로 recursion ----1
-                //친구2로 recursion ----2
-                // 이렇게 계속 BFS
-            } catch (e) {}
-        }
-        recursion(this);
+        // 현재 큐에 있는 친구의 친구 목록 리턴하기
+        // let storage = [];
+        // let queue = [];
+
+        // function recursion(node) {
+        //     try {
+        //         for (let el of node.friends) {
+        //             // 친구1의 친구들로 for문 ---2
+        //             // 친구2의 친구들로 for문 ---3
+        //             if (queue.indexOf(el) === -1) queue.push(el);
+        //             // 친구1의 친구들을  큐에 푸시, 현재 큐 : [친구2, 친구1-1, 친구1-2]
+        //             // 친구2의 친구들을 큐에 푸시, 현재 큐 : [친구1-1, 친구1-2, 친구2-1, 친구2-2]
+        //         }
+        //         let pop = queue.shift();
+        //         storage.push(pop);
+        //         // 현재 큐에 [친구1, 친구2] -- 1
+        //         return recursion(pop); // 친구1로 recursion ----1
+        //         //친구2로 recursion ----2
+        //         // 이렇게 계속 BFS
+        //     } catch (e) {}
+        // }
+        // 여기서부터는 DFS
+        // let stack = [];
+
+        // function recursion(node) {
+        //     try {
+        //         // 제공 받은 노드의 친구들을 스택에 넣고
+        //         // 쌓은 스택의 맨 끝에 있는 것을 pop(FILO)
+        //         // 그 맨끝에 있는 노드의 친구들을 스택에 넣고
+        //         // 다시 쌓은 스택의 맨 끝에 있는 것을 pop .....
+        //         for (let el of node.friends) {
+        //             if (queue.indexOf(el) === -1) stack.push(el);
+        //         }
+        //         let pop = stack.pop();
+        //         console.log(pop.name);
+        //         return recursion(pop);
+        //     } catch (e) {};
+        // }
+        // recursion(this);
+        // console.log(storage);
+        let stack = [];
+
     }
 }
 
@@ -73,14 +96,12 @@ let jaeyoung = new User('jaeyoung', 25, )
 let minhae = new User('minhae', 21, )
 let sinhee = new User('sinhee', 27, )
 let junhee = new User('junhee', 26, )
-
+let dongjun = new User('dongjun', 26, )
 
 yongki.addFriends('minsun');
 yongki.addFriends('jaeyoung');
-minsun.addFriends('jaeyoung');
 minsun.addFriends('minhae');
 minsun.addFriends('sinhee');
-jaeyoung.addFriends('minhae');
 jaeyoung.addFriends('junhee');
-
+sinhee.addFriends('dongjun');
 yongki.friendsRecommendation();
