@@ -1,0 +1,27 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http.js",
+  "scripts": {
+    "start": "nodemon bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0715yk/DailyPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0715yk/DailyPractice/issues"
+  },
+  "homepage": "https://github.com/0715yk/DailyPractice#readme",
+  "dependencies": {
+    "browserify": "^16.5.2",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4",
+    "require": "^2.4.20",
+    "requirejs": "^2.3.6"
+  }
+}
