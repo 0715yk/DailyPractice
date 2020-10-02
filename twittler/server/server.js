@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const fs = require('fs');
 const corsOptions = {
-    "Access-Control-Allow-Origin": "http://localhost:3000",
+    "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Accept, Content-Type",
     "Access-Control-Max-Age": "2000"
@@ -13,8 +13,12 @@ const corsOptions = {
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 let tweetArr = [];
-app.use(cors(corsOptions));
-app.use(express.static(__dirname + '/../client/public'))
+
+// 여기를 서버라고 하기보다는 서버로 들어온 요청을 처리해주는
+// web application이 여기라고 생각됨 (아직 DB는 없음)
+
+app.use(cors());
+app.use(express.static(__dirname + '/../client/'))
 
 app.get('/getTweet', (req, res) => {
     fs.readFile('tweetData.txt', 'utf8', (err, data) => {
@@ -56,7 +60,7 @@ app.post('/tweet', jsonParser, (req, res, next) => {
     res.end();
 })
 
-app.use(function (req, res, next) {
+app.use(function (req, res) {
     res.status(404).send("Sorry can't find that!").end();
 })
 
