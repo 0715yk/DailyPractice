@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Twittler</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600;700&family=Noto+Sans+KR:wght@100&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8290613ec0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- user_profile division : user의 프로필 정보와 메뉴바가 있는 파트  -->
+    <div id="user_profile">
+        <div id="imagePart" style="width:50%; height:27%;  position: absolute; left:25%; top:10%;">
+            <img id="userImg" style="border:4px solid black; border-radius: 30px; width:100%; height:100%;"
+                src="img/Twitter_Logo_Blue.svg" alt="user_image" />
+        </div>
+        <div id="nicknamePart"
+            style="font-size: 25px; width:50%; text-align:center; font-weight:200; position:absolute; left:25%; top:39%; text-align: center;">
+            @yongkini</div>
+        <div id="informPart" style="position:absolute; top:50%; width: 100%;">
+            <ul>
+                <li><a href="#"><i style="font-size: 35px;" class="fas fa-ellipsis-v"></i> List</a></li>
+                <li><a href="#"><i style="font-size: 35px;" class="fas fa-bookmark"></i> Bookmark</a></li>
+                <li><a href="#"><i style="font-size: 35px;" class="fas fa-bell"></i> Notification</a></li>
+                <li><a href="#"><i style="font-size: 35px;" class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </div>
+        <!-- <img style="position:absolute; width:30%; height:30%; left:0; bottom:0;" src="/Users/hong-yong-gi/Desktop/twittler/img/Twitter_Logo_Blue.svg"/> -->
+    </div>
+
+    <!-- tweet_and_tweeList division : user가 tweet을 할 수 있는 form과 자신과 타인이 남긴 트윗을 볼 수 있는 섹션으로 구성 -->
+    <div id="tweet_and_tweeList">
+        <div style="position: absolute; left:7%; width:83%; height:35%;">
+            <div style="position: absolute; width:100%; height:100%;">
+                <div id="nickName" style="position:absolute; width:20%; height:60%; font-size:20px; top:10%;">
+                    <img style="border-radius: 20px; position: absolute; right:5%;" width="100%" height="80%"
+                        src="img/Twitter_Logo_Blue.svg" alt="user_image" />
+                </div>
+                <input id="getComment"
+                    style="border-radius:10px; top: 10%; height:67%; width:79%; position: absolute; left:20%;"
+                    type="text" />
+                <div id="button_tweet" style="position: absolute; width: 100%; height: 19%; right:0;bottom: -5px; ">
+                    <button id="tweet"
+                        style="cursor: pointer; border-radius:10px; background-color: #1DA1F2;  position:absolute; right:0; padding:0; width:25%; height:100%;">
+                        <p
+                            style=" font-family: 'Baloo Tamma 2', cursive;
+                            font-family: 'Noto Sans KR', sans-serif;color:white; font-size:25px; box-sizing:border-box; margin:0; top:0; height: 100%; width: 100%; overflow:hidden ;position:absolute;">
+                            tweet</p>
+                    </button>
+                    <!-- <button id="refresh"
+                        style="cursor: pointer; display:inline-block; border-radius:10px; background-color: #1DA1F2;  position:absolute; padding:0; width:25%; height:100%; left:49%;">
+                        <p
+                            style=" font-family: 'Baloo Tamma 2', cursive;
+                            font-family: 'Noto Sans KR', sans-serif;color:white; font-size:25px; box-sizing:border-box; margin:0; top:0;  height: 100%; width: 100%; overflow:hidden ;position:absolute;">
+                            refresh</p> -->
+                    </button>
+                    <!-- 사용자 편의성을 위해서 cancel filter버튼과 기능을 없애고, 닉네임을 누르면 필터링/ 한번더 누르면 필터링off가 되도록 변경함 -->
+                    <!-- <button id="cancelFilter" style="cursor: pointer; display:inline-block; left:20%; border-radius:10px; background-color: #1DA1F2;  position:absolute; padding:0; width:28%; height:100%;"><p style=" font-family: 'Baloo Tamma 2', cursive;
+                            font-family: 'Noto Sans KR', sans-serif;color:white; font-size:25px; box-sizing:border-box; margin:0; top:0;  height: 100%; width: 100%; overflow:hidden ;position:absolute;">Cancel Filter</p></button> -->
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute; left:5%; top:35%; font-size:large;" id="howManyTweets">tweet: 30</div>
+        <div id="theOtherTweet"
+            style="border-radius: 20px; box-shadow: 0px 13px 30px 8px grey;  position: absolute; width:95%; height: 58%; top: 40%; left: 2%; overflow: scroll;">
+            <ul id="tweetList"
+                style="background-color:white; list-style: none; position: absolute; left:2%; width: 97%; margin-top:15px; height:90%">
+            </ul>
+        </div>
+        </aside>
+</body>
+<script src='script.js'></script>
+
+</html>
