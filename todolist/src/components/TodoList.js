@@ -1,24 +1,38 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Todo from './Todo'
+import React from 'react';
+import { store } from '../index';
+import './ToDoList.css'
+import { completedList, deleteList } from '../actions';
 
-const TodoList = ({ todos, toggleTodo }) => (
-    <ul>
-        {todos.map(todo => (
-            <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
-        ))}
-    </ul>
-)
+class ToDoList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.checkComplete = this.checkComplete.bind(this);
+        this.deleteList = this.deleteList.bind(this);
+    }
+    checkComplete() {
+        store.dispatch(completedList(this.idValue.value));
+    }
 
-TodoList.propTypes = {
-    todos: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            completed: PropTypes.bool.isRequired,
-            text: PropTypes.string.isRequired
-        }).isRequired
-    ).isRequired,
-    toggleTodo: PropTypes.func.isRequired
+    deleteList() {
+        store.dispatch(deleteList(this.idValue.value));
+    }
+
+    render() {
+        const { id, date, text, completed } = this.props;
+        return (
+            <>
+                <li className="list">
+                    <div id="date">{date}</div>
+                    <div id="text" style={completed ? { textDecorationLine: 'line-through' } : {}}>{text.length <= 30 ? text : `${text.substring(0, 31)}...`}</div>
+                    <input id="checkbox" type="checkbox" onChange={this.checkComplete}></input>
+                    <input type="hidden" value={id} ref={(input) => { this.idValue = input }} />
+                    <button onClick={this.deleteList}>Delete</button>
+                </li>
+            </>
+        );
+    }
+
+
 }
 
-export default TodoList
+export default ToDoList;

@@ -1,0 +1,31 @@
+.list {
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: center;
+    font-size: 30px;
+}
+
+#date {
+    flex-grow: 1;
+}
+
+#text {
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    flex-grow: 2;
+    flex-shrink: initial;
+}
+
+#checkbox {
+    width: 30px;
+    height: 30px;
+    flex-grow: 1;
+}
+
+button {
+    height: 100%;
+    flex-grow: 1;
+}

@@ -1,0 +1,23 @@
+.Nav {
+    position: relative;
+    flex-grow: 0.3;
+    order: 1;
+    background-color: #6495ED;
+    width: 100%;
+}
+
+.toDoLists {
+    order: 1;
+    flex-grow: 0.7;
+    width: 100%;
+}
+
+img {
+    position: absolute;
+    box-sizing: border-box;
+    width: 25%;
+    height: 83%;
+    left: 3%;
+    top: 8%;
+    border-radius: 10px;
+}
