@@ -1,31 +1,57 @@
 .list {
-    border: 1px solid;
+    margin-top: 30px;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
     align-items: center;
-    font-size: 30px;
+    text-align: center;
 }
 
 #date {
-    flex-grow: 1;
+    font-size: 25px;
 }
 
 #text {
-    width: 30%;
+    width: 40%;
     text-align: center;
-    display: inline-block;
-    flex-grow: 2;
-    flex-shrink: initial;
+    flex-grow: 0.5;
+    font-size: 25px;
 }
 
 #checkbox {
     width: 30px;
     height: 30px;
-    flex-grow: 1;
+    flex-grow: 0.1;
 }
 
 button {
+    font-size: 25px;
+    background-color: #6495ED;
+    font-weight: bold;
+    box-sizing: border-box;
     height: 100%;
-    flex-grow: 1;
+    flex-grow: 0.4;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1090px) {
+    .list {}
+
+    #text {
+        font-size: 0.9em;
+    }
+
+    #date {
+        font-size: 0.9em;
+
+    }
+
+    #checkbox {}
+
+    button {
+        font-size: 0.9em;
+
+    }
 }

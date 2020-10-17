@@ -1,33 +1,56 @@
-.appendBar {
-    width: 50%;
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 30%;
-    left: 30%;
-}
-
-.appendBar input {
-    font-size: 35px;
+#clockPart {
     order: 1;
-    flex-grow: 0.8;
-    border-radius: 10px;
-    box-shadow: gray 1px;
+    flex-grow: 0.1;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 
-.appendBar button {
+#inputArea {
+    margin-top: 10px;
+    order: 2;
+    flex-grow: 0.5;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+#inputArea input {
+    box-sizing: border-box;
+    order: 1;
+    flex-grow: 0.7;
+    font-size: 30px;
+}
+
+#inputArea button {
     margin-left: 5px;
     order: 2;
-    flex-grow: 0.2;
+    flex-grow: 0.3;
+    box-sizing: border-box;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2em;
     background-color: white;
     color: #6495ED;
     font-weight: bold;
-    border-radius: 10px;
 }
 
 .appendBar button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1090px) {
+    #inputArea input {
+        font-size: 1.0em;
+        width: 20%;
+    }
+
+    #inputArea button {
+        width: 5%;
+        font-size: 1.0em;
+    }
+
+    #clockPart {
+        font-size: 1.0em;
+    }
 }
