@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/0715yk/DailyPractice/todolist/static/css/main.c6a1e8e5.chunk.css",
+    "main.js": "/0715yk/DailyPractice/todolist/static/js/main.6db03a84.chunk.js",
+    "main.js.map": "/0715yk/DailyPractice/todolist/static/js/main.6db03a84.chunk.js.map",
+    "runtime-main.js": "/0715yk/DailyPractice/todolist/static/js/runtime-main.66e64847.js",
+    "runtime-main.js.map": "/0715yk/DailyPractice/todolist/static/js/runtime-main.66e64847.js.map",
+    "static/js/2.1238369c.chunk.js": "/0715yk/DailyPractice/todolist/static/js/2.1238369c.chunk.js",
+    "static/js/2.1238369c.chunk.js.map": "/0715yk/DailyPractice/todolist/static/js/2.1238369c.chunk.js.map",
+    "index.html": "/0715yk/DailyPractice/todolist/index.html",
+    "precache-manifest.827db3427115b24097dc5094431612a3.js": "/0715yk/DailyPractice/todolist/precache-manifest.827db3427115b24097dc5094431612a3.js",
+    "service-worker.js": "/0715yk/DailyPractice/todolist/service-worker.js",
+    "static/css/main.c6a1e8e5.chunk.css.map": "/0715yk/DailyPractice/todolist/static/css/main.c6a1e8e5.chunk.css.map",
+    "static/js/2.1238369c.chunk.js.LICENSE.txt": "/0715yk/DailyPractice/todolist/static/js/2.1238369c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66e64847.js",
+    "static/js/2.1238369c.chunk.js",
+    "static/css/main.c6a1e8e5.chunk.css",
+    "static/js/main.6db03a84.chunk.js"
+  ]
+}

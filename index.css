@@ -1,0 +1,18 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#root {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
